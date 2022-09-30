@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Todolist.css";
 
 class Todolist extends Component {
   constructor(props) {
@@ -64,52 +65,59 @@ class Todolist extends Component {
     return (
       <>
         {alert === true ? <p>Please enter a task</p> : ""}
-        <div className="container p-5">
-          <form onSubmit={this.handleSubmit}>
+        <div className="containerbg">
+          <form onSubmit={this.handleSubmit} className="form">
             <input
               type="text"
               placeholder="enter a task"
               onChange={this.handleChange}
               value={this.state.task.content}
+              className="enterTask"
             />
-            <button>Add task</button>
-            <h5>Task list</h5>
+            <button className="add">Add task</button>
+          </form>
+          <h5 className="title">Task list</h5>
+          <div className="divStyle">
             <ol>
               {list.map((item, index) => {
                 return (
-                  <li key={index}>
+                  <li key={index} className="style">
                     <div
                       className={
                         item.completed
-                          ? "fw-bold text-decoration-line-through"
-                          : "fw-bold"
+                          ? "fw-bold text-decoration-line-through "
+                          : "fw-bold "
                       }
                     >
                       {item.content}
                     </div>
                     {/* <button>modify</button> */}
-                    <button
-                      onClick={() => {
-                        this.handleSingleClick(index);
-                      }}
-                    >
-                      Delete task
-                    </button>
-                    <div className="form-check form-switch mx-1">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="flexCheckDefault"
-                        onChange={() => {
-                          this.handleComplete(item.id);
+                    <div className="formStyle">
+                      <button
+                        onClick={() => {
+                          this.handleSingleClick(index);
                         }}
-                      />
+                        className="deleteBtn"
+                      >
+                        Delete task
+                      </button>
+                      <div className="form-check form-switch mx-1">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="flexCheckDefault"
+                          checked={item.completed == true ? true : false}
+                          onChange={() => {
+                            this.handleComplete(item.id);
+                          }}
+                        />
+                      </div>
                     </div>
                   </li>
                 );
               })}
             </ol>
-          </form>
+          </div>
         </div>
       </>
     );

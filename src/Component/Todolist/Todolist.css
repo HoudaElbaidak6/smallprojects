@@ -1,0 +1,79 @@
+.containerbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: monospace;
+}
+
+.enterTask,
+.add {
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.enterTask {
+  padding: 15px 60px;
+  border: 5px solid rebeccapurple;
+}
+
+.add {
+  padding: 15px 30px;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 200px;
+  padding: 30px;
+  margin: 10px;
+  border: 5px solid rebeccapurple;
+  border-radius: 10px;
+}
+
+.formStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.title {
+  margin: 40px 0px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.deleteBtn {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+}
+
+.divStyle {
+  text-align: center;
+  margin: 0px auto;
+}
+
+ol {
+  padding: 0px;
+  margin: 0px;
+  max-height: 70vh;
+  overflow-y: auto;
+}

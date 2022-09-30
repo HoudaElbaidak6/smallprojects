@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../images/spacecute.jpg);
+}
+.id > h5 {
+  font-size: 0.7em;
+  margin: 0px;
+}
+
+.id > h5:nth-child(1) {
+  font-weight: 700;
+  font-size: 1em;
+}
+.greenCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  justify-content: start;
+  align-self: flex-end;
+}
+.icones {
+  font-size: 1.8em;
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
+}
+
+.iconDiv {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 10px;
+  background-color: #baa1d4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.icones {
+  margin-left: 10px;
+}
+
+.chat-body {
+  width: 100%;
+  height: 50vh;
+  background-image: url(../../images/blue.png);
+  background-position: top;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-container {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  width: 23%;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  display: block;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+/* @keyframes display {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 20%;
+  }
+} */
+
+.chat-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background-color: #baa1d4;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.answerP {
+  margin: 0px;
+}
+
+.sentMessage {
+  position: relative;
+  border: 0.5px lightgray;
+  background-color: #0bfee0;
+  border-radius: 5px;
+  max-width: 40%;
+  padding: 5px;
+  left: 190px;
+  /* margin: 5px; */
+}
+
+.receivedMessage {
+  position: relative;
+  border: 0.5px lightgray;
+  background-color: #0bfee0;
+  border-radius: 5px;
+  max-width: 40%;
+  padding: 5px;
+  left: 10px;
+  /* margin: 5px; */
+}
+
+#star-btn {
+  all: unset;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.icones-star {
+  font-size: 3em;
+  color: #ff207b;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+input {
+  border-radius: 5px;
+}
+
+.icones-heart,
+.icones-send {
+  color: rgb(247, 127, 147);
+}
+
+.fireBtn,
+.sendBtn,
+input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
