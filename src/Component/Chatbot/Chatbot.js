@@ -34,7 +34,7 @@ class Chatbot extends Component {
       "hi",
       "no I'm a human ",
       "I'm fine, thank you ",
-      "i have a partener",
+      "i have a partner",
     ];
   }
 
